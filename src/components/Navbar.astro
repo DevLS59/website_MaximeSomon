@@ -1,0 +1,129 @@
+<div class="container-nav">
+  <a href="/" class="title-header">MAXIME SOMON</a>
+
+  <div class="menu">
+    <div class="btns-social">
+      <img src="./images/instagram-line.svg" alt="" />
+      <img src="./images/youtube-line.svg" alt="" />
+    </div>
+    <div class="adresse-mail">
+      <p>maximesomon@truc.fr</p>
+    </div>
+  </div>
+
+  <div class="nav-menu-toggle">Contact</div>
+</div>
+
+<style>
+  .container-nav {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    padding: 0 5%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    z-index: 500;
+  }
+
+  .title-header {
+    z-index: 1000;
+    /* transition : 0.5s; */
+    font-family: "SaoTorpes";
+    font-size: 2vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mouv {
+    transform: translateX(200%) translateY(300px);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+  }
+
+  .scale {
+    transform: scale(3);
+    transition: 0.5s;
+  }
+
+  .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.8s;
+    /* z-index : 300; */
+    background: #fff;
+    transform: translateY(-100%);
+  }
+
+  .btns-social {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translateX(-50%;);
+    opacity: 0;
+    /* transition : 0.5s; */
+    display: flex;
+    gap: 3rem;
+
+    width: 100%;
+    justify-content: center;
+  }
+  .btns-social img {
+    width: 40px;
+    height: 40px;
+  }
+  .adresse-mail {
+    position: absolute;
+    opacity: 0;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transition : 0.5s; */
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .nav-menu-toggle {
+    position: absolute;
+    right: 3rem;
+    font-weight: bold;
+    /* z-index : 500; */
+  }
+
+  .open {
+  }
+
+  .opacity {
+    opacity: 1;
+    /* transition : 2s; */
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector(".nav-menu-toggle");
+  const menu = document.querySelector(".menu");
+  const titleHeader = document.querySelector(".title-header");
+  const adresse = document.querySelector(".adresse");
+  console.log(adresse);
+
+  const tl = gsap.timeline();
+  tl.to(menu, { y: 0 });
+  tl.to(titleHeader, { y: 400 });
+  tl.to(titleHeader, { scale: 3, delay: 0.5 });
+  tl.to(" .btns-social", { opacity: 1 }, "-=0.3");
+  tl.to(".adresse-mail", { opacity: 1 }, "-=0.3");
+  tl.reversed(true);
+  tl.to;
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+
+    tl.reversed(!tl.reversed());
+  });
+</script>
