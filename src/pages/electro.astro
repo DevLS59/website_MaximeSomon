@@ -51,7 +51,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <style>
+  <style lang="scss">
     .section1 {
       width: 100%;
       height: auto;
@@ -62,7 +62,10 @@ import Layout from "../layouts/Layout.astro";
       height: 100vh;
       /* position: relative; */
       display: flex;
+      
     }
+
+    
 
     .left {
       position: absolute;
@@ -188,6 +191,21 @@ import Layout from "../layouts/Layout.astro";
     .mySwiper .swiper-pagination-bullet {
       width: 20px;
       height: 20px;
+    }
+
+
+    @media (max-width: 1200px) { 
+      .wrapper-elec {
+        display : block;
+        height : auto;
+        padding : 0 1rem;
+
+        .right, .left {
+          width : 100%;
+          position : relative;
+          
+        }
+      }
     }
   </style>
 </Layout>
