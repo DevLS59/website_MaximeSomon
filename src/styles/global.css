@@ -39,6 +39,7 @@ li {
   background-color: #fff !important;
   opacity: 1 !important;
   border-radius: 0 !important;
+  margin-bottom: 2rem !important;
 }
 .swiper-pagination-bullet-active {
   background-color: red !important;
