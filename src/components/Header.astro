@@ -1,6 +1,6 @@
 <div class="container-video">
   <video autoplay loop muted>
-    <source src="./videos/SHOWREEL.mp4" type="video/mp4" />
+    <source src="./SHOWREEL.mp4" type="video/mp4" />
   </video>
 
   <div class="text-box">
@@ -72,4 +72,10 @@
     color: #fff;
     letter-spacing: 6px;
   }
-</style>
+
+  @media (max-width : 700px ){
+    .container-video {
+      display: none;
+    }
+  }
+ </style>
