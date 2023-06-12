@@ -1,7 +1,10 @@
 <div class="container-nav">
-  <a href="/" class="title-header">MAXIME SOMON</a>
+  
+  <div><a href="/" class="title-header">MAXIME SOMON</a></div>
+  <div class="nav-menu-toggle">Contact</div>
+</div>
 
-  <div class="menu">
+<div class="menu">
      <div class="adresse-mail">
       <p>maximesomon@truc.fr</p>
     </div>
@@ -12,19 +15,15 @@
    
   </div>
 
-  <div class="nav-menu-toggle">Contact</div>
-</div>
-
 <style>
   .container-nav {
     width: 100%;
     height: 60px;
-    position: absolute;
-    padding: 0 5%;
+    position :fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
+    display : flex;
+    /* justify-content: space-between; */
     align-items: center;
     background: #fff;
     z-index: 500;
@@ -34,11 +33,20 @@
     z-index: 1000;
     /* transition : 0.5s; */
     font-family: "SaoTorpes";
-    font-size: 2vw;
+    /* font-size: 2vw; */
     /* font-size: 2rem; */
     position: absolute;
+    top : 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    font-size:  20px;
+  }
+
+  .nav-menu-toggle {
+    position: absolute;
+    right: 3rem;
+    font-weight: bold;
+    /* z-index : 500; */
   }
 
   .mouv {
@@ -59,16 +67,20 @@
     top: 0;
     left: 0;
     transition: 0.8s;
-    /* z-index : 300; */
+    z-index : 300;
     background: #fff;
     transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    flex-direction : column;
+    justify-content: center;
   }
 
   .btns-social {
-    position: absolute;
-    top: 60%;
+    /* position: absolute;
+    top: 6+-0%;
     left: 0;
-    transform: translateX(-50%;);
+    transform: translateX(-50%;); */
     opacity: 0;
     /* transition : 0.5s; */
     display: flex;
@@ -82,21 +94,17 @@
     height: 40px;
   }
   .adresse-mail {
-    position: absolute;
+    /* position: absolute; */
     opacity: 0;
-    top: 35%;
+    /* top: 35%;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);  */
      transition : 0.5s;
+     margin-bottom : 200px;
     font-size: 2rem;
     font-weight: 300;
   }
-  .nav-menu-toggle {
-    position: absolute;
-    right: 3rem;
-    font-weight: bold;
-    /* z-index : 500; */
-  }
+  
 
   .open {
   }
@@ -107,16 +115,27 @@
   }
 
 
-  @media (max-width : 1200px) {
+  /* @media (max-width : 1200px) {
     .title-header {
       font-size: 1.5rem;
-      font-size: 3vw;
+      font-size: 2.5vw;
     }
-  }
+  } */
 
   @media (max-width : 500px) {
+
+    .container-nav {
+
+      padding : 0;
+      
+    }
     .title-header {
-      font-size: 3vw;
+      left : 23%;
+      font-size: 14px;
+    }
+
+    .nav-menu-toggle {
+      right : 1rem;
     }
   }
 </style>
@@ -130,7 +149,7 @@
 
   const tl = gsap.timeline();
   tl.to(menu, { y: 0 });
-  tl.to(titleHeader, { y: 500 });
+  tl.to(titleHeader, { y: '50vh' });
   tl.to(titleHeader, { scale: 3, delay: 0.5 });
   tl.to(" .btns-social", { opacity: 1 }, "-=0.3");
   tl.to(".adresse-mail", { opacity: 1 }, "-=0.3");
