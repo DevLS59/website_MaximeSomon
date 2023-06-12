@@ -37,6 +37,7 @@
 
   .text-box {
     position: absolute;
+   
     top: 0;
     left: 0;
     width: 100%;
@@ -61,10 +62,12 @@
     color: #fff;
     position: absolute;
     top: 50%;
-    transform: translateY(50%;);
+    transform: translateY(-50%;);
     font-family: "SaoTorpes";
     display: flex;
     justify-content: center;
+    align-items : center;
+    padding-top : 15px;
   }
 
   .links a {
@@ -84,6 +87,7 @@
 
      .links {
       gap : 4rem;
+      padding-top : 0;
      }
   }
 
@@ -94,7 +98,11 @@
 
      .text-box {
       height : 100%;
-      font-size: 12px;
+      font-size: 10px;
+     }
+
+     h1 {
+      line-height: 110px;
      }
 
      .links {
