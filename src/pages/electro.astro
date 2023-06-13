@@ -1,4 +1,5 @@
 ---
+import TitleSection from "../components/TitleSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -6,20 +7,14 @@ import Layout from "../layouts/Layout.astro";
   <section class="section1">
     <div class="wrapper-elec">
       <div class="left">
-        <div class="wrapper-letter">
-          <div class="lettre">
-            <video src="./"></video><video autoplay loop muted>
-              <source src="./SHOWREEL.mp4" type="video/mp4" />
-            </video>
-            <div class="text">
-              <h2>ELECTRO</h2>
-            </div>
-          </div>
-          
+
+        <div class="wrapper">
+          <TitleSection />
         </div>
+
         <p class="description">
           creation d'un text expliquant des collab en tant qju'Electro <br>
-<br>
+          <br>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
           expedita est debitis suscipit amet alias repellendus, perferendis
           quisquam asperiores accusamus aliquid, fuga velit natus eveniet dolor,
@@ -113,58 +108,20 @@ import Layout from "../layouts/Layout.astro";
       align-items: center;
       flex-direction: column;
       padding: 100px 20px;
-    }
-
-    .wrapper-letter {
-      position: relative;
       
-      align-items: center;
-    }
-    .lettre {
-      width: 100%;
-      height: 10vw;
-      position: relative;
-      display: flex;
     }
 
-    .lettre video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .wrapper {
+      margin-top : 2rem;
+      width : 100%;
+      text-align : center;
     }
-
-    .text {
-  //     position: absolute;
-  //         top: 0;
-  // left: 0;
-  width: 100%;
-  height: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  background: #fff;
-  color: #000;
-  mix-blend-mode: screen;
-}
-    h2 {
-      margin-top : 4rem;
-      font-size: 4vw;
-      font-family: "SaoTorpes";
-    }
-
-  
-
-
-
-    .description {
+.description {
       
     }
 
     .right {
-      width: 70%;
+      width: 70vw;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -214,11 +171,13 @@ import Layout from "../layouts/Layout.astro";
     }
 
 
-    @media (max-width: 1200px) { 
+    @media (max-width: 1500px) { 
       .wrapper-elec {
-        display : block;
+        display : flex;
+        flex-direction : column;
         height : auto;
         padding : 0 1rem;
+
 
         .right, .left {
           width : 100%;
