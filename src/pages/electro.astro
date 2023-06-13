@@ -3,7 +3,7 @@ import TitleSection from "../components/TitleSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="MAximeSomon - Electro">
+<Layout title="MaximeSomon - Electro">
   <section class="section1">
     <div class="wrapper-elec">
       <div class="left">
@@ -82,18 +82,6 @@ import Layout from "../layouts/Layout.astro";
       
     }
 
-    .cursor {
-      width : 30px;
-      height : 30px;
-      border-radius : 50%;
-      background : red;
-      position : absolute;
-      top : 0;
-      left :0;
-      opacity : 0;
-      transition : opacity 0.5s;
-      z-index : 3000;
-    }
 
     .left {
       position: absolute;
@@ -102,21 +90,24 @@ import Layout from "../layouts/Layout.astro";
       width: 30%;
       height: 100%;
       background: #fff;
-
       display: flex;
       justify-content: top;
       align-items: center;
       flex-direction: column;
       padding: 100px 20px;
       
+      .wrapper {
+        margin-top : 2rem;
+        width : 100%;
+        // height : 100%;
+       
+        text-align : center;
+        
+      }
     }
 
-    .wrapper {
-      margin-top : 2rem;
-      width : 100%;
-      text-align : center;
-    }
-.description {
+
+    .description {
       
     }
 
@@ -171,7 +162,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
 
-    @media (max-width: 1500px) { 
+    @media (max-width: 1200px) { 
       .wrapper-elec {
         display : flex;
         flex-direction : column;
@@ -183,6 +174,10 @@ import Layout from "../layouts/Layout.astro";
           width : 100%;
           position : relative;
           
+        }
+
+        .left {
+          padding : 40px 10px;
         }
       }
     }

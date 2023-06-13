@@ -19,8 +19,10 @@
   .wrapper-title {
     position: relative;
     width : 85%;
-    height : 4vw;
+   
+    margin : 0 auto;
     margin-bottom : 5rem;
+    
     
   }
 
@@ -35,19 +37,43 @@
   }
 
 .text {
-  position : absolute;
+  /* position : absolute;
   top : 0;
-  left :0;
+  left :0; */
   background: #fff;
   color: #000;
   width : 100%;
   mix-blend-mode: screen;
+
   
 }
 h2 {
   font-size: 4vw;
 font-family: "SaoTorpes";
-overflow : hidden;
+
     }
 
-      </style>
+
+@media (max-width: 1500px) { 
+
+  .wrapper-title {
+    position: relative;
+    width : 85%;
+    margin : 0 auto;
+    height : 4rem;
+    margin-bottom : 2rem;
+    
+  }
+  h2 {
+    font-size: 4rem;
+  }
+
+  .description {
+    width : 70vw;
+
+  }
+}
+
+
+</style>
+
