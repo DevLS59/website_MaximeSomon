@@ -102,11 +102,15 @@ import Layout from "../layouts/Layout.astro";
       .description {
         width: 90%;
         margin: 0 auto;
-       
         font-family: sans-serif;
 
-       
+        @media(max-width : 500px) {
+          font-size: 14px;
+         
+        }
       }
+
+      
     }
   }
   .bg-video {
