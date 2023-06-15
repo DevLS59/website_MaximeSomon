@@ -3,190 +3,170 @@ import TitleSection from "../components/TitleSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="MaximeSomon - Electro">
-  <section class="section1">
-    <div class="wrapper-elec">
-      <div class="left">
-
-        <div class="wrapper">
-          <TitleSection />
-        </div>
-
-        <p class="description">
-          creation d'un text expliquant des collab en tant qju'Electro <br>
-          <br>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-          expedita est debitis suscipit amet alias repellendus, perferendis
-          quisquam asperiores accusamus aliquid, fuga velit natus eveniet dolor,
-          quidem praesentium sequi? Illum? <br><br>
-          
-          Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Consequatur expedita est debitis
-          suscipit amet alias repellendus, perferendis quisquam asperiores
-          accusamus aliquid, fuga velit natus eveniet dolor, quidem praesentium
-          sequi? Illum?
-        </p>
-      </div>
-
-      <div class="right">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+<Layout>
+  <div class="wrapper-elec3">
+    <div class="bg-video">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+             <a href="/a2h-non" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreela2hnon.mp4" type="video/mp4" />
               </video>
-              <h3 class="title">A2H-NON clip (Chef électro)</h3>
-            </div>
-            <div class="swiper-slide">
-              <video autoplay loop muted>
-                <source src="./showreela2hsolo.mov" type="video/mp4" />
-              </video>
-              <h3 class="title">A2H-SOLO clip (Electro)</h3>
-            </div>
-         
-            <div class="swiper-slide">
+            </a>
+            <h3 class="title">A2H-NON clip (Chef électro)</h3>
+          </div>
+
+          <div class="swiper-slide">
+             <a href="/2purp-naguin" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreelnaguini.mp4" type="video/mp4" />
               </video>
-              <h3 class="title">2PURP - Naguin clip (Chef electro)</h3>
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <h3 class="title">2PURP - Naguin clip (Chef electro)</h3>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/a2h-solo" class="link-video">
+              <video autoplay loop muted>
+                <source src="./showreela2hsolo.mov" type="video/mp4" />
+              </video>
+            </a>
+            <h3 class="title">A2H - SOLO clip (Electro) </h3>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="/luko" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreelluko.mp4" type="video/mp4" />
               </video>
-              <h3 class="title">LUKO - Pub (Electro) </h3>
-            </div>
-             </div>
+            
+            </a>
+            <h3 class="title">LUKO - Pub (Electro)</h3>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
-    <div class="cursor"></div>
-  </section>
+    <div class="part-left">
+      <h1>ELECTRO</h1>
 
-  <style lang="scss">
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+        perspiciatis debitis in nisi consequatur similique dolores libero sequi
+        illum sit, ullam harum quis vero minima enim explicabo inventore alias
+        impedit?
+      </p>
+    </div>
+  </div>
+</Layout>
 
-    
-    .section1 {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .wrapper-elec {
-      width: 100%;
-      height: 100vh;
-      /* position: relative; */
-      display: flex;
-      
-    }
+<style lang="scss">
+  @font-face {
+    font-family: "SaoTorpes";
+    src: url("../fonts/SaoTorpes.otf");
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .wrapper-elec3 {
+    width: 100%;
+    height: calc(100% - 60px);
+    position: absolute;
+    top: 60px;
 
-
-    .left {
+    .part-left {
+      width: 30vw;
+      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      width: 30%;
-      height: 100%;
       background: #fff;
       display: flex;
-      justify-content: top;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 100px 20px;
-      
-      .wrapper {
-        margin-top : 2rem;
-        width : 100%;
-        // height : 100%;
-       
-        text-align : center;
-        
+      mix-blend-mode: screen;
+      z-index: 100;
+
+      @media (max-width: 900px) {
+        width: 100%;
+        height: 20%;
       }
-    }
 
+      h1 {
+        font-weight: 800;
+        font-family: "SaoTorpes";
+        color: #000;
+        font-size: 5vw;
+        margin-bottom: 3rem;
 
-    .description {
-      
-    }
-
-    .right {
-      width: 70vw;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      padding: 40px 20px;
-      background: #000;
-      position: absolute;
-      right: 0;
-      top: 0;
-      /* cursor: none; */
-    }
-
-    .swiper {
-      width: 100%;
-      height: 80%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide .title {
-      font-family: "Gabo";
-      color: red;
-      position: absolute;
-      bottom: 20%;
-      font-size: 2vw;
-    }
-
-    .swiper-slide video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .mySwiper .swiper-pagination-bullet {
-      width: 20px;
-      height: 20px;
-    }
-
-
-    @media (max-width: 1200px) { 
-      .wrapper-elec {
-        display : flex;
-        flex-direction : column;
-        height : auto;
-        padding : 0 1rem;
-
-
-        .right, .left {
-          width : 100%;
-          position : relative;
-          
+        @media (max-width: 900px) {
+          margin-bottom: 1rem;
         }
+      }
 
-        .left {
-          padding : 40px 10px;
+      .description {
+        width: 90%;
+        margin: 0 auto;
+        font-family: sans-serif;
+
+      @media(max-width : 500px) {
+          font-size: 14px;
+         
         }
       }
     }
+  }
+  .bg-video {
+    width: 100%;
+    height: 100%;
+  }
 
-    @media (max-width : 700px) {
-      
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide .title {
+    font-family: "Gabo";
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    right: 1rem;
+    font-size: 3vw; 
+
+    @media(max-width : 900px) {
+      font-size: 2rem;
     }
-  </style>
-</Layout>
+  }
+
+  .swiper-slide video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mySwiper .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -212,22 +192,4 @@ var swiper = new Swiper(".mySwiper", {
   //   prevEl: ".swiper-button-prev",
   // },
 });
-
-
-
-const cursor = document.querySelector('.cursor');
-const right = document.querySelector('.right');
-
-right.addEventListener('mousemove', (e) => {
-const x= e.clientX
-const y= e.clientY
-cursor.style.opacity = 1;
-cursor.style.left = x - 15 +'px'
-cursor.style.top = y -15 +'px'
-
-})
-
-right.addEventListener('mouseleave', (e) => {
-  cursor.style.opacity = 0;
-})
 </script>
