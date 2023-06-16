@@ -1,5 +1,5 @@
 ---
-import TitleSection from "../components/TitleSection.astro";
+
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,17 +8,17 @@ import Layout from "../layouts/Layout.astro";
     <div class="bg-video">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-             <a href="/a2h-non" class="link-video">
+           <div class="swiper-slide">
+            <a href="/electro_a2h-non" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreela2hnon.mp4" type="video/mp4" />
               </video>
             </a>
             <h3 class="title">A2H-NON clip (Chef électro)</h3>
-          </div>
-
+          </div>  
+ <!--
           <div class="swiper-slide">
-             <a href="/2purp-naguin" class="link-video">
+            <a href="/electro_2purp" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreelnaguini.mp4" type="video/mp4" />
               </video>
@@ -27,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="swiper-slide">
-            <a href="/a2h-solo" class="link-video">
+            <a href="/electro_a2h-solo" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreela2hsolo.mov" type="video/mp4" />
               </video>
@@ -36,21 +36,22 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="swiper-slide">
-            <a href="/luko" class="link-video">
+            <a href="/electro_luko" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreelluko.mp4" type="video/mp4" />
               </video>
-            
             </a>
             <h3 class="title">LUKO - Pub (Electro)</h3>
           </div>
+      </div> -->
+
         </div>
+
         <div class="swiper-pagination"></div>
-      </div>
     </div>
 
     <div class="part-left">
-      <h1>ELECTRO</h1>
+       <h1>ELECTRO</h1>
 
       <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
@@ -72,12 +73,22 @@ import Layout from "../layouts/Layout.astro";
     padding: 0;
     box-sizing: border-box;
   }
+
+  .link-video {
+    width : 100%;
+    height : 100%;
+  }
   .wrapper-elec3 {
     width: 100%;
     height: calc(100% - 60px);
     position: absolute;
     top: 60px;
 
+    .bg-video {
+    width: 100%;
+    height: 100%;
+    
+    }
     .part-left {
       width: 30vw;
       height: 100%;
@@ -90,11 +101,13 @@ import Layout from "../layouts/Layout.astro";
       align-items: center;
       flex-direction: column;
       mix-blend-mode: screen;
-      z-index: 100;
+      z-index: 500;
+     
 
       @media (max-width: 900px) {
         width: 100%;
-        height: 20%;
+        height: 30%;
+        
       }
 
       h1 {
@@ -114,24 +127,29 @@ import Layout from "../layouts/Layout.astro";
         margin: 0 auto;
         font-family: sans-serif;
 
-      @media(max-width : 500px) {
+        @media(max-width : 500px) {
           font-size: 14px;
-         
         }
       }
     }
-  }
-  .bg-video {
-    width: 100%;
-    height: 100%;
-  }
+  }  
+  
 
   .swiper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+   
+  }
+
+  .swiper-wrapper {
+    width : 100%;
+    height : 100%;
+    
   }
 
   .swiper-slide {
+    width : 100%;
+    height : 100%;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -139,6 +157,7 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background : red;
   }
 
   .swiper-slide .title {

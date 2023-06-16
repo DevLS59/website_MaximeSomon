@@ -1,7 +1,6 @@
 ---
-const {urlVideo, linkretour} = Astro.props
+const {urlVideo, href} = Astro.props
 
-console.log(linkretour)
 ---
 
 <div class="videoFull">
@@ -13,7 +12,7 @@ console.log(linkretour)
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>
-  <a class="btn_close" href={linkretour}>close</a>
+  <a class="btn_close" href="/electro">close</a>
 </div>
 <style>
   iframe {

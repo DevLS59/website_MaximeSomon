@@ -10,8 +10,8 @@
       <p>maximesomon@truc.fr</p>
     </div>
     <div class="btns-social">
-      <img src="./images/instagram.svg" alt="" />
-      <img src="./images/youtube.svg" alt="" />
+      <img src="./instagram.svg" alt="" />
+      <img src="./youtube.svg" alt="" />
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     display : flex;
     align-items: center;
     background: #fff;
-    z-index: 500;
+    z-index: 1000;
   }
 
   .title-header {
@@ -33,6 +33,8 @@
     font-size:  20px;
     text-align : center;
     width : 100%;
+   
+   
   }
 
   .nav-menu-toggle {
@@ -61,7 +63,7 @@
     top: 0;
     left: 0;
     transition: 0.8s;
-    z-index : 300;
+    z-index : 800;
     background: #fff;
     transform: translateY(-100%);
     display: flex;
@@ -71,6 +73,8 @@
   }
 
   .btns-social {
+    position  : absolute;
+    bottom : 30%;
     opacity: 0;
     transition : 0.5s;
     display: flex;
@@ -83,10 +87,11 @@
     height: 40px;
   }
   .adresse-mail {
-  
+  position : absolute;
+  top : 40%;
     opacity: 0;
     transition : 0.5s;
-    margin-bottom : 200px;
+    /* margin-bottom : 200px; */
     font-size: 2rem;
     font-weight: 300;
   }
@@ -139,6 +144,8 @@ mm.add("(min-width: 600px)", () => {
   tl.to(menu, { y: 0 })
   .to(titleHeader, { y: '50vh'})
   .to(titleHeader, { scale: 3, delay: 0.5 })
+  .to('.adresse-mail', {opacity : 1})
+  .to('.btns-social', {opacity : 1})
   tl.reversed(true);
   tl.to;
 
