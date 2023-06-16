@@ -1,31 +1,8 @@
 ---
+import LecteurFull from "../components/LecteurFull.astro";
+
+const url = "https://www.youtube.com/embed/li9s5VeJkFY"
 ---
 
-<div class="videoFull">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/li9s5VeJkFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <a class="btn_close" href="/electro">close</a>
-</div>
-<style>
-  iframe {
-    width: 85%;
-    height: 85%;
-    object-fit: cover;
-  }
+<LecteurFull urlVideo = {url}/>
 
-  .videoFull {
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn_close {
-    font-size: 1.2rem;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 12px;
-  }
-</style>
