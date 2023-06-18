@@ -11,12 +11,14 @@
     <div class="links">
       <a href="/electro">Electro</a>
       <a href="/real">Real</a>
-      <a href="/rappeur">Rappeur</a>
+      <a href="/rappeur">Auteur/Interprete</a>
     </div>
   </div>
 
 
 <style>
+
+  
   @font-face {
     font-family: "SaoTorpes";
     src: url("../fonts/SaoTorpes.otf");
@@ -47,12 +49,13 @@
     mix-blend-mode: multiply;
     text-align: center;
   }
+
   h1 {
     font-family: "SaoTorpes";
     font-size: 19vw;
     letter-spacing: 1.5vw;
+    line-height: 30vw;
   }
-
   .links {
     width: 100%;
     gap: 8rem;
@@ -66,6 +69,23 @@
     align-items : center;
     padding-top : 15px;
     font-size: 18px;
+
+  }
+  @media (max-width : 900px) {
+
+    .links {
+      gap : 4rem;
+      font-size: 14px;
+
+    }
+  }
+  @media (max-width : 600px) {
+
+    .links {
+      gap : 2rem;
+      font-size: 10px;
+
+    }
   }
 
   .links a {
