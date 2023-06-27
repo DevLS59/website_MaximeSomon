@@ -95,6 +95,7 @@ import Layout from "../layouts/Layout.astro";
       flex-direction: column;
       mix-blend-mode: screen;
       z-index: 500;
+      opacity : 0.7;
      
 
       @media (max-width: 900px) {
@@ -156,9 +157,14 @@ import Layout from "../layouts/Layout.astro";
     font-family: "Gabo";
     color: #fff;
     position: absolute;
-    bottom: 20%;
-    right: 1rem;
+    bottom: 50%;
+    right: 5rem;
     font-size: 3vw; 
+
+    span {
+      font-size: 2vw;
+    
+    }
 
     @media(max-width : 900px) {
       font-size: 2rem;
@@ -190,6 +196,9 @@ import Layout from "../layouts/Layout.astro";
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
+
+  speed: 1200,
+  effect: 'fade',
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,
