@@ -1,0 +1,248 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+<div class="wrapper_music">
+
+
+  <section class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/cover.jpg" alt="card image">
+        </div>
+
+      <!-- <div class="card__content">
+          <span class="card__title">Web Developer</span>
+          <span class="card__name">David Murphy</span>
+          <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+          <button class="card__btn">View More</button>
+        </div> -->
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="./cover2.jpg" alt="card image">
+        </div>
+
+        <!-- <div class="card__content">
+          <span class="card__title">Ui Designer</span>
+          <span class="card__name">Sarah Bowen</span>
+          <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+          <button class="card__btn">View More</button>
+        </div> -->
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/cover5samourai.png" alt="card image">
+        </div>
+
+        <!-- <div class="card__content">
+          <span class="card__title">Web Developer</span>
+          <span class="card__name">David Murphy</span>
+          <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+          <button class="card__btn">View More</button>
+        </div> -->
+      </div> 
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/cover-tarantino.jpg" alt="card image">
+        </div>
+
+        <!-- <div class="card__content">
+          <span class="card__title">Mobile Designer</span>
+          <span class="card__name">Kelsey West</span>
+          <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+          <button class="card__btn">View More</button>
+        </div> -->
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <div class="part-left">
+     <h1> MUSIC</h1>
+     
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, perspiciatis debitis in nisi consequatur similique dolores libero sequi illum sit, ullam harum quis vero minima enim explicabo inventore alias impedit?</p>
+  </div> 
+  
+  </Layout>
+  <style lang="scss">
+
+
+/* ------------ BASE ------------ */
+.wrapper_music {
+  background : black;
+  width : 100%;
+  height : 100vh;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  margin-left : 10rem;
+  
+}
+/* left */
+
+.part-left {
+      width: 30vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      mix-blend-mode: screen;
+      z-index: 500;
+     
+
+      @media (max-width: 900px) {
+        width: 100%;
+        height: 30%;
+        
+      }
+
+      h1 {
+        font-weight: 800;
+        font-family: "SaoTorpes";
+        color: #000;
+        font-size: 5vw;
+        margin-bottom: 3rem;
+
+        @media (max-width: 900px) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .description {
+        width: 90%;
+        margin: 0 auto;
+        font-family: sans-serif;
+
+        @media(max-width : 500px) {
+          font-size: 14px;
+        }
+      }
+    }
+    
+/* ----------- SLIDER ------------ */
+.swiper{
+  width: 100%;
+}
+
+.swiper-wrapper{
+  width: 100%;
+  height: 35em;
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  width: 20em;
+  height: 20em;
+  /* background-color: #666; */
+  border-radius: 2em;
+ 
+ 
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 2em;
+}
+
+/* .swiper-slide:not(.swiper-slide-active){
+  filter: blur(1px);
+} */
+
+.card__image{
+  width: 20em;
+  height: 600px;
+  
+  
+ 
+  margin-bottom: 2em;
+}
+
+.card__image img{
+  width: 100%;
+  height: 100%;
+ border-radius : 10px;
+  object-fit: cover;
+  -webkit-box-reflect : below 0.2px linear-gradient(transparent, transparent, #0002, #0004)
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  top: .2em;
+}
+
+.card__name{
+  color: var(--color);
+}
+
+.card__text{
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1em 0;
+}
+
+.card__btn{
+  background-color: var(--color);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: .5em;
+  border-radius: .5em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+  </style>
+
+  <!-- Swiper JS -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script is:inline> 
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</Layout>
+
+  
+  
