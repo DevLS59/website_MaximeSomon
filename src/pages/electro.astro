@@ -1,5 +1,4 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
 ---
 <link
@@ -12,9 +11,13 @@ import Layout from "../layouts/Layout.astro";
   <div class="wrapper-elec3">
 
     <div class="bg-video">
+
       <div class="swiper mySwiper">
+
         <div class="swiper-wrapper">
-           <div class="swiper-slide">
+
+          <!-- SLIDE  -->
+          <div class="swiper-slide">
             <a href="/electro_a2h-non" class="link-video">
               <video autoplay loop muted>
                 <source src="./showreela2hnon.mp4" type="video/mp4" />
@@ -23,6 +26,7 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="title">A2H-NON clip <br><span> (Chef électro)</span> </h3>
           </div>  
  
+          <!-- SLIDE  -->
           <div class="swiper-slide">
             <a href="/electro_2purp" class="link-video">
               <video autoplay loop muted>
@@ -32,6 +36,7 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="title">2PURP - Naguin <br> <span>clip (Chef electro)</span></h3>
           </div>
 
+          <!-- SLIDE  -->
           <div class="swiper-slide">
             <a href="/electro_a2h-solo" class="link-video">
               <video autoplay loop muted>
@@ -41,6 +46,7 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="title">A2H - SOLO <br> <span>clip (Electro)</span> </h3>
           </div>
 
+          <!-- SLIDE  -->
           <div class="swiper-slide">
             <a href="/electro_luko" class="link-video">
               <video autoplay loop muted>
@@ -49,16 +55,13 @@ import Layout from "../layouts/Layout.astro";
             </a>
             <h3 class="title">LUKO <br> <span>Pub (Electro)</span></h3>
           </div>
-      </div> 
-
-        </div>
-
-        <div class="swiper-pagination"></div>
+        </div> 
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <div class="part-left">
-       <h1>ELECTRO</h1>
-
+      <h1>ELECTRO</h1>
       <!-- <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
         perspiciatis debitis in nisi consequatur similique dolores libero sequi
@@ -66,11 +69,7 @@ import Layout from "../layouts/Layout.astro";
         impedit?
       </p> -->
     </div>
-
-
   </div>
-  
-
 </Layout>
 
 <style lang="scss">
@@ -84,8 +83,10 @@ import Layout from "../layouts/Layout.astro";
     box-sizing: border-box;
   }
 
-.container-swipe {
-}
+  .link-video {
+    width : 100%;
+    height : 100%;
+  }
   .wrapper-elec3 {
     width: 100%;
     height: calc(100% - 60px);
@@ -110,13 +111,13 @@ import Layout from "../layouts/Layout.astro";
       align-items: center;
       flex-direction: column;
       mix-blend-mode: screen;
-      z-index: 10000;
+      z-index: 500;
       opacity : 0.7;
      
 
       @media (max-width: 900px) {
         width: 100%;
-        height: 30%;
+        height: 10%;
         
       }
 
@@ -129,6 +130,7 @@ import Layout from "../layouts/Layout.astro";
 
         @media (max-width: 900px) {
           margin-bottom: 1rem;
+          font-size: 3rem;
         }
       }
 
@@ -167,7 +169,6 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
   }
 
   .swiper-slide .title {
