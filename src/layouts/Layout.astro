@@ -23,14 +23,25 @@ const { title } = Astro.props;
     
 		<title>{title}</title>
 	</head>
-	<body>
+	<body >
     <Navbar />
-		<slot />
+    <!-- <div id="swup">
+      <slot  />
+    </div> -->
+<slot />
+
+    <!-- <div class="overlay transition-wipe"></div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 
+  <!-- Swup -->
+  <script  is:inline src="https://cdnjs.cloudflare.com/ajax/libs/swup/2.0.8/swup.min.js"></script>
+
+<script is:inline>
+  const swup = new Swup()
+</script>
  
 	</body>
 </html>
