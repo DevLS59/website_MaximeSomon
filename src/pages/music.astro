@@ -87,6 +87,10 @@ import Layout from "../layouts/Layout.astro";
   // justify-content: center;
   align-items: center;
   margin-left : 10rem;
+
+  @media (max-width : 900px) {
+    margin-left : 0;
+  }
   
 }
 /* left */
@@ -152,14 +156,17 @@ import Layout from "../layouts/Layout.astro";
   height: 20em;
   /* background-color: #666; */
   border-radius: 2em;
- 
- 
-
   display: flex;
   align-items: center;
   flex-direction: column;
 
   margin: 0 2em;
+
+  // @media (max-width : 900px) {
+  //   width :10em;
+  //   height : 10em;
+    
+  // }
 }
 
 /* .swiper-slide:not(.swiper-slide-active){
